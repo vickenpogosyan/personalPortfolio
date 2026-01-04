@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}    
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: linear-gradient(120deg, #aaaaaa, #ffe6c0, #aaaaaa);
+    background-size: 300% 300%;
+    animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.info {
+    display: flex;
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    gap: 12px;
+
+    transform: translateX(50px);
+    opacity: 0;
+    animation: slideInRight 0.5s forwards;
+    animation-delay: 0.75s;
+}
+
+@keyframes slideInRight {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.socials {
+    display: flex;
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    gap: 12px;
+
+    transform: translateX(-50px);
+    opacity: 0;
+    animation: slideInLeft 0.5s forwards;
+    animation-delay: 0.75s;
+}
+
+@keyframes slideInLeft {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+nav a {
+    text-decoration: none;
+    padding: 12px;
+    border: 2px solid black;
+    border-radius: 16px;        /* rounded corners */
+    color: rgb(80, 80, 80);
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: black;
+    transform: scale(1.2);
+    transition: all 0.3s ease;  
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 56px;
+    margin-bottom: 12px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+h2 {
+    font-size: 32px;
+    color: grey;
+    opacity: 0;
+    transform: translateY(20px);
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    border-right: 2px solid grey;
+
+    animation: 
+        fadeInUp 1s forwards 0.5s,
+        typing 3s steps(23,end) forwards 0.75s,
+        hideCursor 0.1s forwards 3.75s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes typing {
+    to { width: 23ch; }
+}
+
+@keyframes hideCursor {
+    to { border-right: none; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
