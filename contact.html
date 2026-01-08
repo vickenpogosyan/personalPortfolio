@@ -11,14 +11,17 @@
 <body>
     <main class="body">
         <h1 class="header">Contact Me</h1>
-        <form class="contactForm">
+        <form class="contactForm" action="https://formspree.io/f/xpqwvgkr" method="POST">
             <div class="contactDiv">
-                <input type="text" placeholder="Your Name">
-                <input type="email" placeholder="your@email.com">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="your@email.com" required>
             </div>
 
-            <textarea placeholder="Your Message"></textarea>
+            <textarea name="message" placeholder="Your Message" required></textarea>
             <button type="submit" class="sendButton">Submit</button>
+            <input type="hidden" name="_redirect"
+                value="file:///Users/vickenpogosyan/Documents/Programming%202.0/Personal%20Projects/Portfolio/thankYou.html">
+            <input type="text" name="_gotcha" style="display:none">
 
         </form>
     </main>
