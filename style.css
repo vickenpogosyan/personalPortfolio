@@ -1,24 +1,33 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}    
+}
+
 body {
     height: 100vh;
     display: flex;
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 16px;
 
-    background: linear-gradient(120deg, #aaaaaa, #ffe6c0, #aaaaaa);
+    background: linear-gradient(120deg, #676767, #ffffff, #676767);
     background-size: 300% 300%;
-    animation: gradientMove 10s ease infinite;
+    animation: gradientMove 16s ease infinite;
 }
 
 @keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .info {
@@ -65,15 +74,17 @@ nav a {
     text-decoration: none;
     padding: 12px;
     border: 2px solid black;
-    border-radius: 16px;        /* rounded corners */
-    color: rgb(80, 80, 80);
+    /* rounded corners */
+    border-radius: 12px;
+    color: rgb(74, 74, 74);
     font-weight: bold;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
     color: black;
-    transform: scale(1.15);
+    text-decoration: underline;
+    transform: scale(1.1);
 }
 
 .mainBody {
@@ -87,8 +98,7 @@ nav a:hover {
 
 .mainHeader {
     margin-bottom: 12px;
-    font-size: 56px;
-
+    font-size: 52px;
 
     opacity: 0;
     transform: translateY(20px);
@@ -97,18 +107,21 @@ nav a:hover {
 
 h2 {
     font-size: 32px;
-    color: grey;
-    
+    color: rgb(96, 96, 96);
+
     opacity: 0;
     transform: translateY(20px);
+    animation: fadeInUp 1s forwards 0.5s;
+}
+
+.mainH2 {
     white-space: nowrap;
     overflow: hidden;
     width: 0;
     border-right: 2px solid grey;
 
-    animation: 
-        fadeInUp 1s forwards 0.5s,
-        typing 3s steps(23,end) forwards 0.5s,
+    animation: fadeInUp 1s forwards 0.5s,
+        typing 3s steps(23, end) forwards 0.5s,
         hideCursor 0.1s forwards 3.5s;
 }
 
@@ -120,11 +133,15 @@ h2 {
 }
 
 @keyframes typing {
-    to { width: 23ch; }
+    to {
+        width: 23ch;
+    }
 }
 
 @keyframes hideCursor {
-    to { border-right: none; }
+    to {
+        border-right: none;
+    }
 }
 
 .body {
@@ -135,11 +152,11 @@ h2 {
 }
 
 .header {
-    margin-top: 40px;
-    margin-bottom: 12px;
+    margin-top: 44px;
+    margin-bottom: 8px;
     align-items: center;
     text-align: center;
-    font-size: 48px;
+    font-size: 40px;
 
     opacity: 0;
     transform: translateY(20px);
@@ -147,12 +164,13 @@ h2 {
 }
 
 .contentDiv {
-    margin-top: 32px;
+    margin-top: 36px;
     margin-left: 64px;
-    margin-right:64px;
+    margin-right: 64px;
+    min-height: 512px;
     padding: 48px;
     border: solid 2px;
-    border-radius: 16px;  
+    border-radius: 12px;
 
     opacity: 0;
     transform: translateY(20px);
@@ -173,21 +191,24 @@ strong {
 }
 
 ul {
-    padding-left: 48px;;
+    padding-left: 48px;
+    font-size: 20px;
 }
 
 .contactForm {
-    margin: 0 auto; 
-    margin-top: 32px;
-    width: 100%;
-    max-width: 1100px;
-
     display: flex;
     flex-direction: column;
+
+    margin: 0 auto;
+    margin-top: 32px;
+    width: 100%;
+    max-width: 1000px;
 
     border-radius: 12px;
     border: 2px solid rgb(80, 80, 80);
     padding: 40px;
+    padding-left: 64px;
+    padding-right: 64px;
 
     opacity: 0;
     transform: translateY(20px);
@@ -195,13 +216,13 @@ ul {
 }
 
 .contactDiv {
-    margin-top: 20px;
-    margin-bottom: 40px;
-    padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     border: none;
     gap: 32px;
+    margin-top: 36px;
+    margin-bottom: 40px;
+    padding: 0;
 }
 
 .contactForm input,
@@ -210,6 +231,7 @@ ul {
     width: 100%;
     padding: 20px 24px;
 
+    border: 2px solid rgb(80, 80, 80);
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
     color: #555;
@@ -218,7 +240,7 @@ ul {
 }
 
 .contactForm textarea {
-    margin-bottom: 40px;
+    margin-bottom: 36px;
     min-height: 172px;
     resize: none;
 }
@@ -228,17 +250,14 @@ ul {
 
     margin-bottom: 20px;
     padding: 18px 56px;
-    font-size: 20px;
-    font-weight: 500;
-
+    font-size: 22px;
     background: whitesmoke;
 
-    border: none;
-    border-radius: 12px;
+    border: 2px solid rgb(80, 80, 80);
     cursor: pointer;
     transition: transform 0.2s ease;
 }
 
 .sendButton:hover {
-    transform: translateY(-2px);
+    transform: scale(1.0575);
 }
