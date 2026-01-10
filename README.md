@@ -1,6 +1,6 @@
-# Portfolio Website
+# Personal Portfolio
 
-A sleek, minimal personal portfolio: https://vickenpogosyan.github.io/personalPortfolio/
+A sleek, minimal personal portfolio website (built from scratch): https://vickenpogosyan.github.io/personalPortfolio/
 
 ## Features
 - Multi-page layout with easy navigation
