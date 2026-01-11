@@ -11,7 +11,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
 
-    background: linear-gradient(120deg, #676767, #ffffff, #676767);
+    background: linear-gradient(120deg, #7e7e7e, #eaeaea, #7e7e7e);
     background-size: 300% 300%;
     animation: gradientMove 16s ease infinite;
 }
@@ -76,7 +76,7 @@ nav a {
     border: 2px solid black;
     /* rounded corners */
     border-radius: 12px;
-    color: rgb(74, 74, 74);
+    color: rgb(69, 69, 69);
     font-weight: bold;
     transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -144,16 +144,23 @@ h2 {
     }
 }
 
-.body {
+main {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
 .header {
     margin-top: 44px;
-    margin-bottom: 8px;
+
     align-items: center;
     text-align: center;
     font-size: 40px;
@@ -164,33 +171,45 @@ h2 {
 }
 
 .contentDiv {
-    margin-top: 36px;
-    margin-left: 64px;
-    margin-right: 64px;
-    min-height: 512px;
-    padding: 48px;
-    border: solid 2px;
+    min-height: 518px;
+    padding: 40px;
+    border: 2px solid rgb(69, 69, 69);
     border-radius: 12px;
 
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1s forwards;
+
+    margin: 40px auto;
+    width: 100%;
+    max-width: 1200px;
 }
 
 p {
-    margin-bottom: 16px;
-    font-size: 24px;
+    font-size: 22px;
 
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1s forwards;
+
+    text-align: justify;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: black;
+    width: 100%;
+    max-width: 1300px;
+    margin: 36px auto;
 }
 
 strong {
-    font-size: 28px;
+    font-size: 26px;
 }
 
 ul {
+    padding-top: 20px;
     padding-left: 48px;
     font-size: 20px;
 }
@@ -199,20 +218,19 @@ ul {
     display: flex;
     flex-direction: column;
 
-    margin: 0 auto;
-    margin-top: 32px;
-    width: 100%;
-    max-width: 1000px;
-
     border-radius: 12px;
-    border: 2px solid rgb(80, 80, 80);
-    padding: 40px;
-    padding-left: 64px;
-    padding-right: 64px;
+    border: 2px solid rgb(69, 69, 69);
 
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1s forwards;
+
+    min-height: 518px;
+    padding: 48px;
+    margin: 40px auto;
+    width: 100%;
+    max-width: 900px;
+    gap: 48px;
 }
 
 .contactDiv {
@@ -220,8 +238,6 @@ ul {
     grid-template-columns: 1fr 1fr;
     border: none;
     gap: 32px;
-    margin-top: 36px;
-    margin-bottom: 40px;
     padding: 0;
 }
 
@@ -231,29 +247,27 @@ ul {
     width: 100%;
     padding: 20px 24px;
 
-    border: 2px solid rgb(80, 80, 80);
+    border: 2px solid rgb(69, 69, 69);
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
-    color: #555;
+    color: rgb(96, 96, 96);
     background: whitesmoke;
     outline: none;
 }
 
 .contactForm textarea {
-    margin-bottom: 36px;
-    min-height: 172px;
+    min-height: 188px;
     resize: none;
 }
 
 .sendButton {
     align-self: center;
 
-    margin-bottom: 20px;
-    padding: 18px 56px;
+    padding: 18px 48px;
     font-size: 22px;
     background: whitesmoke;
 
-    border: 2px solid rgb(80, 80, 80);
+    border: 2px solid rgb(69, 69, 69);
     cursor: pointer;
     transition: transform 0.2s ease;
 }
