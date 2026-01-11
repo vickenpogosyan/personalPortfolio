@@ -173,7 +173,7 @@ main {
 }
 
 .contentDiv {
-    min-height: 528px;
+    min-height: min(528px, 70vh);
     padding: 40px;
     border: 2px solid rgb(69, 69, 69);
     border-radius: 12px;
@@ -227,7 +227,7 @@ ul {
     transform: translateY(20px);
     animation: fadeInUp 1s forwards;
 
-    min-height: 528px;
+    min-height: min(528px, 70vh);
     padding: 48px;
     margin: 40px auto;
     width: 100%;
