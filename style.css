@@ -33,8 +33,8 @@ body {
 .info {
     display: flex;
     position: fixed;
-    top: 40px;
-    right: 40px;
+    top: 36px;
+    right: 36px;
     gap: 12px;
 
     transform: translateX(50px);
@@ -53,8 +53,8 @@ body {
 .socials {
     display: flex;
     position: fixed;
-    bottom: 40px;
-    left: 40px;
+    bottom: 36px;
+    left: 36px;
     gap: 12px;
 
     transform: translateX(-50px);
@@ -149,8 +149,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
-    padding-bottom: 140px;
 }
 
 .container {
@@ -161,7 +159,7 @@ main {
 }
 
 .header {
-    margin-top: 44px;
+    margin-top: 40px;
 
     align-items: center;
     text-align: center;
@@ -173,7 +171,7 @@ main {
 }
 
 .contentDiv {
-    min-height: 518px;
+    min-height: 528px;
     padding: 40px;
     border: 2px solid rgb(69, 69, 69);
     border-radius: 12px;
@@ -182,7 +180,7 @@ main {
     transform: translateY(20px);
     animation: fadeInUp 1s forwards;
 
-    margin: 40px auto;
+    margin: 38px auto;
     width: 100%;
     max-width: 1200px;
 }
@@ -227,7 +225,7 @@ ul {
     transform: translateY(20px);
     animation: fadeInUp 1s forwards;
 
-    min-height: 518px;
+    min-height: 528px;
     padding: 48px;
     margin: 40px auto;
     width: 100%;
