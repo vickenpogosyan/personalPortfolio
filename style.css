@@ -123,7 +123,7 @@ h2 {
     border-right: 2px solid grey;
 
     animation: fadeInUp 1s forwards 0.5s,
-        typing 3s steps(23, end) forwards 0.5s,
+        typing 3s steps(34, end) forwards 0.5s,
         hideCursor 0.1s forwards 3.5s;
 }
 
@@ -136,7 +136,7 @@ h2 {
 
 @keyframes typing {
     to {
-        width: 23ch;
+        width: 27ch;
     }
 }
 
