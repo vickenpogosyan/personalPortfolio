@@ -194,7 +194,7 @@ p {
     transform: translateY(20px);
     animation: fadeInUp 1s forwards;
 
-    text-align: justify;
+    text-align: left;
 }
 
 hr {
@@ -214,6 +214,7 @@ ul {
     padding-top: 20px;
     padding-left: 48px;
     font-size: 20px;
+    margin-bottom: 20px;
 }
 
 .contactForm {
